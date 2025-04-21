@@ -1,5 +1,5 @@
 # Have to use NODE 18 with the from command for the base image
-FROM node:18-bullesye
+FROM node:18-bullseye
 
 # Setting the working directory
 WORKDIR /usr/local/app
