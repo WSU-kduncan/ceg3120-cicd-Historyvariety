@@ -12,3 +12,5 @@
      docker --version
      docker run hello-world
      ```
+     
+  5. Make sure you have WSL2 enabled!
