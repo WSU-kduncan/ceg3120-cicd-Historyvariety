@@ -34,8 +34,12 @@
    - `docker build`: This builds the Docker image
    - `-t angular-app`: The `-t` flag is used to tag the image. `angular-app` is the name we are giving to the image!
    - `.`: Refers to the current directory as the build context. It will use the current directory to look for the `Dockerfile` and other necessary files for building the               image.
-   - 
-2. Run the Docker Container
+2. Run the Docker Container with the command:
+   ```
+   sudo docker run -p 4200:4200 <container-name>
+   ```
+   - `-p 4200:4200`: This maps the port 4200 from your computer to port 4200 of the container.
+   - `<container-name>` This is just a placeholder for your container name. For me it would be, `angular-app`
    
 
 
