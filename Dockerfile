@@ -5,7 +5,7 @@ FROM node:18-bullseye
 WORKDIR /app
 
 # Copying the application now
-COPY ./angular-site/ .
+COPY ./angular-site/wsu-hw-ng-main /app
 
 # Install any dependencies (global ones)
 RUN npm install -g @angular/cli@15.0.3
