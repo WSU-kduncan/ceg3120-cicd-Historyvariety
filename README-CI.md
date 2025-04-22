@@ -25,9 +25,17 @@
   - For installation confirmation run command: `docker --version`
   - For container runnability run command: `docker run hello-world`
 
-## Manu
+
+## Manually Setting up a Container
+1. Before setting up a container we need to build a Docker Image. In the project directory, where the dockerfile is located, run the command:
+   `docker build -t angular-app .`
+   
+2. 
 
 
 
 ## Resources
 1. [Testing Docker download](https://hub.docker.com/_/hello-world)
+   *Official documentation for testing Docker's Hello World Image* -- Referenced in the Docker Setup guide
+2. [Docker Documentation: Writing a Dockerfile](https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/)
+  *Official guide on how to write a Dockerfile for building images.* -- Heavily referenced when creating my Dockerfile
