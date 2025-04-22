@@ -7,11 +7,8 @@ WORKDIR /app
 # Copying the application now
 COPY ./angular-site/ .
 
-# Install Angular CLI globally
-RUN npm install -g @angular/cli
-
 # Install any dependencies (global ones)
-RUN npm install -g @angular/cli
+RUN npm install -g @angular/cli@15.0.3
 
 # Install any dependencies (Angular app ones)
 RUN npm install
