@@ -13,7 +13,7 @@
      docker --version
      docker run hello-world
      ```
-     
+     (hello-world 1)
   5. Make sure you have WSL2 enabled!
 
 ### Additional Independencies
@@ -26,3 +26,8 @@
   - For container runnability run command: `docker run hello-world`
 
 ## Manu
+
+
+
+## Resources
+1. [Testing Docker download](https://hub.docker.com/_/hello-world)
