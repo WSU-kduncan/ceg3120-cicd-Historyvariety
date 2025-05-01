@@ -5,7 +5,7 @@ FROM node:18-bullseye
 WORKDIR /app
 
 # Copy only the package.json and package-lock.json first to leverage Docker's cache
-COPY ./angular-site/wsu-hw-ng-main/package*.json ./
+COPY package*.json ./
 
 # Install global dependencies (Angular CLI)
 RUN npm install -g @angular/cli@15.0.3
@@ -14,7 +14,7 @@ RUN npm install -g @angular/cli@15.0.3
 RUN npm install
 
 # Now copy the rest of the application code
-COPY ./angular-site/wsu-hw-ng-main /app
+COPY . .
 
 # Expose port 4200 for the Angular app
 EXPOSE 4200
