@@ -1,21 +1,24 @@
-# Have to use NODE 18 with the from command for the base image
+# Use node:18-bullseye as the base image
 FROM node:18-bullseye
 
-# Setting the working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copying the application now
-COPY ./angular-site/wsu-hw-ng-main /app
+# Copy only the package.json and package-lock.json first to leverage Docker's cache
+COPY ./angular-site/wsu-hw-ng-main/package*.json ./
 
-# Install any dependencies (global ones)
+# Install global dependencies (Angular CLI)
 RUN npm install -g @angular/cli@15.0.3
 
-# Install any dependencies (Angular app ones)
+# Install local dependencies (Angular app dependencies)
 RUN npm install
 
-# Exposing the Port
+# Now copy the rest of the application code
+COPY ./angular-site/wsu-hw-ng-main /app
+
+# Expose port 4200 for the Angular app
 EXPOSE 4200
 
-# Running the Angular application
+# Command to start the Angular app
 CMD ["npm", "start"]
 
