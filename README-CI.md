@@ -159,8 +159,34 @@ why do this? To reflect the new repository or image name!
 
 - Secrets
     - Add `DOCKER_USERNAME` and `DOCKER_TOKEN` into my new repository’s secrets!
-- [My Workflow file!]()
+- [My Workflow file!](https://github.com/WSU-kduncan/ceg3120-cicd-Historyvariety/blob/d6cd4254a6b4dbd521f3b1f37b88e0e350b81277/angular-site/wsu-hw-ng-main/Workflow.yml)
 
+## Testing & Validation
+
+### How to Test Your Workflow
+
+1. Push a new commit to the `main` branch of your repository!
+2. Go to your GitHub repository on the web!
+3. Click the `Actions` tab to view your recent workflow runs!
+4. Confirm that the lastest run did everything you said in your Workflow file:
+   - Triggered successfully after your commit.
+   - Completed all the steps without any errors.
+   - Displays the logs showing the image was built and pushed.
+
+### How to Validate the Docker Image
+
+After the workflow completes:
+
+1. Visit [DockerHub](https://hub.docker.com/) and log in to your account!
+2. Navigate to your **Repositories** and locate that the image was pushed (e.g., `your-username/angular-app`).
+3. Pull and run the image locally using Docker (in your terminal!):
+
+```
+   docker pull your-username/angular-app:latest
+   docker run -p 4200:4200 your-username/angular-app:latest
+```
+4. Open your browser and go to [link above](http://localhost:4200)
+5. Check the output to make sure your containier is running!
 
 ## What is not working!
 
