@@ -188,6 +188,17 @@ After the workflow completes:
 4. Open your browser and go to [link above](http://localhost:4200)
 5. Check the output to make sure your containier is running!
 
+### Documentation
+
+
+## Project Description
+
+
+  The goal of this project is to automatically build a Docker image and upload it to DockerHub whenever we update the main branch on GitHub.
+  This all saves a lot time and keeps everything up to date without needing to do it manually!
+  This project helped familairize me with Git actions and Workflow files too!
+
+  
 ## What is not working!
 
 
@@ -203,4 +214,16 @@ After the workflow completes:
    -- Heavily referenced when creating my Dockerfile
 4. [Creating and Running a Docker Container: A Step-by-Step Guide](https://dontpaniclabs.com/blog/post/2024/01/18/creating-and-running-a-docker-container-a-step-by-step-guide/)
   *A Guide on the Manual Setup of Docker Containers*
-    -- Used as a template for the Manual creation of the container. I did change the  `-f` flag into the `.` though just because, I put my Dockerfile into the root directory. 
+    -- Used as a template for the Manual creation of the container. I did change the  `-f` flag into the `.` though just because, I put my Dockerfile into the root directory.
+   
+5. [GitHub Actions: Workflow Syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)  
+   *Documentation on writing a `.yml` file for workflows*  
+   -- Used when I wanted to make sure my trigger and steps were working right
+
+6. [GitHub Marketplace - docker/login-action](https://github.com/docker/login-action)  
+   *An official action used to log into DockerHub from GitHub Actions*  
+   -- Used in my workflow file so I didn’t have to write a manual login step
+   
+7. [Docker Docs: Tagging Images](https://docs.docker.com/engine/reference/commandline/tag/)  
+   *Simple explanation on how to tag images for Docker*  
+   -- Helpful when making sure my image had the right name before pushing 
