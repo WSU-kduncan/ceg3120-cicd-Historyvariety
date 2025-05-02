@@ -40,8 +40,32 @@
    ```
    - `-p 4200:4200`: This maps the port 4200 from your computer to port 4200 of the container.
    - `<container-name>` This is just a placeholder for your container name. For me it would be, `angular-app`
-   
 
+3. Gather additional depencies with these series of commands:
+```
+npm install
+npm start
+```
+- `npm install` -- installs the addional depencies!
+- `npm start` -- starts the angular app!
+
+  Step 4: Verifying the Application is Running!
+  - **From inside the container:** just look for some text thats says:
+  
+  ```
+    - Generating browser application bundles (phase: setup)...
+  ✔ Browser application bundle generation complete.
+  Build at: 2025-05-02T21:45:33.674Z - Hash: c79711fd8a99397d - Time: 24651ms
+  ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+  ```
+
+  - **From the host browser:** Either click the link provided from your container or go to [link above](http://localhost:4200)
+ 
+## Dockerfile & Building Images
+  Here is a view of my dockerfile!
+  ```
+  
+  ```
 ## What is not working!
 
 
