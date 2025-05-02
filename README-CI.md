@@ -42,6 +42,10 @@
    - `<container-name>` This is just a placeholder for your container name. For me it would be, `angular-app`
    
 
+## What is not working!
+
+
+ - The webpage for some reason is not loading on my end. I think it maybe a security group issue? It keeps saying err_connection whenever I click the link provided after building the image.
 
 
 ## Resources
