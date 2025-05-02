@@ -122,7 +122,40 @@ npm start
 ## Link to Repository
 [My Repo!](https://hub.docker.com/r/historyvariety/perdue-ceg3120/tags)
 
+### GitHub Actions and DockerHub
 
+## Creating a Personal Access Token (PAT) for DockerHub
+
+  1. Click your profile -> Account Settings -> Security
+  2. Under Access Tokens, click `Create`
+  3. Give it a name! eg: `ci thing `
+  4. select Read/Write access scope!
+  5. Save your PAT somewhere secure!
+
+### Setting Secrets in GitHub
+
+1. In your GitHub repository, go to **Settings -> Secrets and variables -> Actions**.
+2. Click **New repository secret** twice to add:
+   - `DOCKER_USERNAME` — Your DockerHub username
+   - `DOCKER_TOKEN` — The token from DockerHub
+
+### Secrets I used!
+- `DOCKER_USERNAME`	-- DockerHub account username
+- `DOCKER_TOKEN` -- DockerHub access token (PAT)
+
+### Summary of Git WorkFlow
+My Github workflow automatically:
+- Runs whenever code (*a commit*) is pushed to the `main` branch!
+- Builds a Docker image from the project's `Dockerfile`!
+- Authenticates with DockerHub using repository secrets!
+- Pushes the Docker image to DockerHub!
+
+
+### Adapting My Workflow file for Other/Future Projects!
+- **Change the image name/tag** in:
+  ```yaml
+  tags: ${{ secrets.DOCKER_USERNAME }}/<new-app-name>:<tag>
+  
 ## What is not working!
 
 
