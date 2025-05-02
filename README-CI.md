@@ -62,10 +62,67 @@ npm start
   - **From the host browser:** Either click the link provided from your container or go to [link above](http://localhost:4200)
  
 ## Dockerfile & Building Images
-  Here is a view of my dockerfile!
+  1. Dockerfile Summary!
+  Here is a summary of the commands I used in my dockerfile!
   ```
-  
+  FROM node:18-bullseye           # Base image with Node.js
+  WORKDIR /app                    # Set the working directory -- where it'll run from
+  COPY package*.json ./           # Copy the dependency definitions
+  RUN npm install -g @angular/cli@15.0.3  # Making sure to install Angular CLI globally
+  RUN npm install                # Making sure to install app dependencies
+  COPY . .                       # Copy the rest of the app files
+  EXPOSE 4200                    # Expose the Angular's default port
+  CMD ["npm", "start"]           # Default command to start the app
   ```
+
+  2.  Build & Run from a Dockerfile!
+  - Build the image with the command:
+  ```
+  docker build -t angular-app .
+  ```
+  - Run the container with the command:
+  ```
+  docker run -it -p 4200:4200 angular-app
+  ```
+  ## Verifying everything again!
+  ```
+    - Generating browser application bundles (phase: setup)...
+  ✔ Browser application bundle generation complete.
+  Build at: 2025-05-02T21:45:33.674Z - Hash: c79711fd8a99397d - Time: 24651ms
+  ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+  ```
+
+  - **From the host browser:** Either click the link provided from your container or go to [link above](http://localhost:4200)
+
+## Creating a DockerHub Repository!
+  1. Login to Dockerhub!
+  2. Click Repositories -> Create Repository
+  3. Then choose a name for it -- ``lastname-course``
+  4. Set visbility to public!
+
+
+## Create a Personal Access Token (PAT)
+1. Click your profile -> Account Settings -> Security
+2. Under Access Tokens, click `Create`
+3. Give it a name! eg: `ci thing `
+4. select Read/Write access scope!
+5. Save your PAT somewhere secure!
+
+## Logging into Docker
+  1. Type in the command: `docker login`
+  2. Then enter your docker username and **PAT** when prompted!
+
+## Push Docker Image to DockerHub
+  1. Run this series of commands!
+     ```
+     docker tag angular-app <your-dockerhub-username>/angular-app
+     docker push <your-dockerhub-username>/angular-app
+     ```
+
+## Link to Repository
+[My Repo!](https://hub.docker.com/r/historyvariety/perdue-ceg3120/tags)
+
+
 ## What is not working!
 
 
