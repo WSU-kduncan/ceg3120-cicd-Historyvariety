@@ -188,10 +188,10 @@ After the workflow completes:
 4. Open your browser and go to [link above](http://localhost:4200)
 5. Check the output to make sure your containier is running!
 
-### Documentation
+## Documentation
 
 
-## Project Description
+### Project Description
 
 
   The goal of this project is to automatically build a Docker image and upload it to DockerHub whenever we update the main branch on GitHub.
@@ -199,10 +199,13 @@ After the workflow completes:
   This project helped familairize me with Git actions and Workflow files too!
 
   
-## What is not working!
+### What is not working!
 
 
  - The webpage for some reason is not loading on my end. I think it maybe a security group issue? It keeps saying err_connection whenever I click the link provided after building the image.
+
+### Revions
+I actually finished the project lol. 
 
 
 ## Resources
