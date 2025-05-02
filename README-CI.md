@@ -155,7 +155,13 @@ My Github workflow automatically:
 - **Change the image name/tag** in:
   ```yaml
   tags: ${{ secrets.DOCKER_USERNAME }}/<new-app-name>:<tag>
-  
+why do this? To reflect the new repository or image name! 
+
+- Secrets
+    - Add `DOCKER_USERNAME` and `DOCKER_TOKEN` into my new repository’s secrets!
+- [My Workflow file!]()
+
+
 ## What is not working!
 
 
