@@ -85,7 +85,6 @@ Update in `docker/build-push-action`
 
 
 ## Resources
-## Resources
 1. [Testing Docker download](https://hub.docker.com/_/hello-world)
    *Official documentation for testing Docker's Hello World Image*
    -- Referenced in the Docker Setup guide
